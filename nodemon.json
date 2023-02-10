@@ -1,0 +1,10 @@
+{
+    "env": {
+        "SQL_ROOT_DIRECTORY": "root",
+        "SQL_HOST": "localhost",
+        "SQL_DIALECT": "mysql",
+        "SQL_PASSWORD": "Ahano1one$",
+        "SQL_DEFAULT_DATABASE": "aerosmart-db",
+        "STRIPE_KEY": "sk_test_T8OE02SHDZWLwk4TYtrWlsat"
+    }
+}
