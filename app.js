@@ -84,22 +84,26 @@ Order.belongsToMany(Product, {through: OrderItem})
 
 sequelize.sync(
     // {force: true}
+).then(
+  result => {
+    app.listen(process.env.PORT || 8000);
+  }
 )
-.then(result =>{
-    return User.findByPk(1)
-})
-.then(user => {
-    if(!user) {
-        User.create({name: 'Ahmad Abdulkadir', email: 'ahmadabdulkadir245@gmail.com'})
-    }
-    return user
-})
-.then(user => {
-    return user.createCart()
-})
-.then(cart => {
-    app.listen(process.env.PORT || 8080);
 
-})
+// .then(result =>{
+//     return User.findByPk(1)
+// })
+// .then(user => {
+//     if(!user) {
+//         User.create({name: 'Ahmad Abdulkadir', email: 'ahmadabdulkadir245@gmail.com'})
+//     }
+//     return user
+// })
+// .then(user => {
+//     return user.createCart()
+// })
+// .then(cart => {
+//     app.listen(process.env.PORT || 8080);
+// })
 .catch(err => console.log(err))
 
